@@ -1,0 +1,25 @@
+.r_bottom div{
+    margin-left: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    text-align: center;
+    display: inline-block;
+    width: 45%;
+    height:45%;
+    margin-bottom: 20px;
+}
+.r_bottom>div li{
+    background-color: rgb(242,242,245);
+    list-style: none;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 3px;
+    float:left;
+    display: inline-block;
+    width: 190px;
+    height:30px;
+    margin:5px 5px;
+    margin-top: 15px;
+}
+.r_bottom>div li span.num{
+    float:right;
+}
+

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="./css/jquery-ui-1.9.2.custom.css">
+    <link type="text/css" rel="stylesheet" href="./css/r_bottom.css">
+    <link type="text/css" rel="stylesheet" href="https://lib.baomitu.com/simple-line-icons/2.4.1/css/simple-line-icons.css">
 </head>
 <body>
     <div class="top">
         <ul>
             <li><img class="tu big" src="./images/猴子.png"> 悟空CRM</li>
             <li><img class="tu" src="./images/办公.png"> 办公</li>
-            <li> <img class="tu" src="./images/客户.png"> 客户管理</li>
+            <li><img class="tu kehu" src="./images/客户.png"> 客户管理</li>
             <li><img class="tu" src="./images/商业-69.png"> 商业智能</li>
             <li><img class="tu" src="./images/项目.png"> 项目管理</li>
         </ul>
@@ -19,32 +22,94 @@
     <div class="under">
         <div class="u_left">
             <ul>
-                <li class="make" style="padding-bottom: 20px">快速创建 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<img class="tu jiantou" src="./images/箭头.png">
+                <span class="make" >快速创建 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<img class="tu jiantou" src="./images/箭头.png">
                     <ul class="u_two">
-                        <li><img class="tu1" src="./images/线索.png">线索 </li>
-                        <li><img class="tu1" src="./images/客户.png">客户</li>
+                        <li><img class="tu1" src="./images/线索 1.png">线索 </li>
+                        <li><img class="tu1" src="./images/客户1.png">客户</li>
                         <li><img class="tu1" src="./images/联系人.png">联系人</li>
-                        <li><img class="tu1" src="./images/灯泡.png">商机</li>
+                        <li><img class="tu1" src="./images/商机1.png">商机</li>
                         <li><img class="tu1" src="./images/钱1.png">回款</li>
                     </ul>
+                </span>
+                <li><img class="tu book" src="./images/仪表盘.png"> 仪表盘</li>
+                <li><img class="tu" src="./images/待办事项.png"> 待办事项</li>
+                <li><img class="tu" src="./images/线索.png"> 线索</li>
+                <li class="kehu1">
+                    <img class="tu" src="./images/客户1.png"> 客户
                 </li>
-                <li><img class="tu" src="./images/工作台.png"> 工作台</li>
-                <li><img class="tu" src="./images/今日日程.png"> 日程</li>
-                <li><img class="tu" src="./images/任务.png"> 任务</li>
-                <li><img class="tu" src="./images/公告.png"> 公告</li>
-                <li><img class="tu" src="./images/日志.png"> 日志</li>
-                <li><img class="tu" src="./images/审批.png"> 审批</li>
-                <li><img class="tu" src="./images/通讯录.png"> 通讯录</li>
+                <li><img class="tu" src="./images/联系人1.png"> 联系人</li>
+                <li><img class="tu" src="./images/4公海.png"> 公海</li>
+                <li><img class="tu" src="./images/商机1.png"> 商机</li>
+                <li><img class="tu" src="./images/合同4.png"> 合同</li>
+                <li><img class="tu" src="./images/回款.png"> 回款</li>
+                <li><img class="tu" src="./images/产品.png"> 产品</li>
+                <li><img class="tu" src="./images/推广.png"> 推广</li>
             </ul>
         </div>
-        <div class="u_right"></div>
+        <div class="u_right">
+            <div class="r_top">
+                <ul>
+                    <li style="padding-top: 18px;"><img class="tu" style="width: 40px; height:40px;" src="./images/人事.png">本人及下属</li>
+                    <li style="font-size: 15px;color: rgb(62, 132, 233); padding-top: 26px;">切换</li>
+                    <li>本年
+                        <input type="text" class="ui-datepicker-time" readonly value="" />
+                        <div class="ui-datepicker-css">	
+                            <div class="ui-datepicker-quick">
+                                <p>快捷日期<a class="ui-close-date">X</a></p>
+                                <div>
+                                    <input class="ui-date-quick-button" type="button" value="今天" alt="0"  name=""/>
+                                    <input class="ui-date-quick-button" type="button" value="昨天" alt="-1" name=""/>
+                                    <input class="ui-date-quick-button" type="button" value="7天内" alt="-6" name=""/>
+                                    <input class="ui-date-quick-button" type="button" value="14天内" alt="-13" name=""/>
+                                    <input class="ui-date-quick-button" type="button" value="30天内" alt="-29" name=""/>
+                                    <input class="ui-date-quick-button" type="button" value="60天内" alt="-59" name=""/>
+                                </div>
+                            </div>
+                            <div class="ui-datepicker-choose">
+                                <p>自选日期</p>
+                                <div class="ui-datepicker-date">
+                                    <input name="startDate" id="startDate" class="startDate" readonly value="2014/12/20" type="text">
+                                -
+                                    <input name="endDate" id="endDate" class="endDate" readonly  value="2014/12/20" type="text" disabled onchange="datePickers()">
+                                
+                                </div>
+                            </div>
+</div>
+                    </li>
+                    <li style="margin-top:21px; float:right; margin-right:20px;background-color: rgb(62, 132, 233); border-radius: 5px;height:18px;width:100px;">
+                        <img class="tu" src="images/数据查重.png">数据查重</li>
+                </ul>
+            </div>
+            <div class="r_bottom">
+                <div>
+                    <span style="float:left"><img class="tu" src="images/简报.png">销售简报</span><br>
+                    <br>
+                    <li><img class="tu1" src="images/客户.png">&nbsp;新增客户<span class="num"> 1</span></li>
+                    <li><img class="tu1" src="images/联系人 (1).png">&nbsp;新增联系人<span class="num">0</span></li>
+                    <li><img class="tu1" src="images/商机.png">&nbsp;新增商机<span class=num>0</span></li>
+                    <li><img class="tu1" src="images/云朵.png">&nbsp;阶段变化的商机<span class="num">0</span></li>
+                    <li><img class="tu1" src="images/合同.png">&nbsp;新增合同<span class="num">0</span></li>
+                    <li><img class="tu1" src="images/记录.png">&nbsp;新增跟进记录<span class="num">0</span></li>
+                    <li><img class="tu1" src="images/回款 1.png">&nbsp;新增回款<span class="num">0</span></li>
+                </div>
+                <div id="main" style=" float:right;width: 420px;height:308px;margin-right: 60px;"></div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./js/echarts.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/main.js"></script>
-<script>
-    
+<script src="./js/custom.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/share.js"></script>
+<script src="./js/chart.js"></script>
+<script type="text/javascript">
+    $(".kehu1").click(function(){
+        this.style.backgroundColor="rgb(62,123,233)";
+    })
 </script>
 </html>
